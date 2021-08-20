@@ -7,6 +7,9 @@ Packages/libs added:
 - styled-reset
 - @material/mwc-textfield
 - @material/mwc-icon
+- react-slick
+- slick-carousel
+- react-rating-stars-component
 
 Observations
 - @material/react-text-field - is no longer under development (originally used in this project)

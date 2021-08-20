@@ -3,7 +3,7 @@ import '@material/mwc-textfield';
 import '@material/mwc-icon';
 import { Container, Search, Logo, Wrapper, Map, Carousel, CarouselTitle } from './styles';
 import logo from '../../assets/logo.svg';
-import { Card } from '../../components';
+import { Card, RestaurantCard } from '../../components';
 
 import restaurante from '../../assets/restaurante-fake.png';
 
@@ -58,6 +58,7 @@ const Home = () => {
             <Card photo={restaurante} title="nome 1" />
           </Carousel>
         </Search>
+        <RestaurantCard />
       </Container>
       <Map />
     </Wrapper>
