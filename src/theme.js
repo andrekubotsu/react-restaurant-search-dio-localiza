@@ -6,7 +6,7 @@ const theme = {
     success: '#135e01',
   },
   fonts: {
-    regular: 'Robot, sans-serif',
+    regular: 'Roboto, sans-serif',
   },
 };
 
