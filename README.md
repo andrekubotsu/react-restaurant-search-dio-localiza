@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 It is using eslint for a better development.
 
-Packages/libs added:
+**Packages/libs added:**
 - styled-components
 - styled-reset
 - @material/mwc-textfield
@@ -11,7 +11,10 @@ Packages/libs added:
 - slick-carousel
 - react-rating-stars-component
 
-Observations
+**I though it was great to:**
+- learn and apply the *react portals concept*: "Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component." definition from reactjs.org 
+
+**Observations**
 - @material/react-text-field - is no longer under development (originally used in this project)
 
 ## Available Scripts

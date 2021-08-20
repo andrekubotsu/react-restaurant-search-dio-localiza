@@ -3,12 +3,14 @@ import '@material/mwc-textfield';
 import '@material/mwc-icon';
 import { Container, Search, Logo, Wrapper, Map, Carousel, CarouselTitle } from './styles';
 import logo from '../../assets/logo.svg';
-import { Card, RestaurantCard } from '../../components';
+import { Card, RestaurantCard, Modal } from '../../components';
 
 import restaurante from '../../assets/restaurante-fake.png';
 
 const Home = () => {
   const [inputValue, setInputValue] = useState('');
+  const [modalOpened, setModalOpened] = useState(false);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -57,10 +59,14 @@ const Home = () => {
             <Card photo={restaurante} title="nome 1" />
             <Card photo={restaurante} title="nome 1" />
           </Carousel>
+          <button type="button" onClick={() => setModalOpened(true)}>
+            Abrir modal
+          </button>
         </Search>
         <RestaurantCard />
       </Container>
       <Map />
+      <Modal isOpen={modalOpened} onClose={() => setModalOpened(!modalOpened)} />
     </Wrapper>
   );
 };
