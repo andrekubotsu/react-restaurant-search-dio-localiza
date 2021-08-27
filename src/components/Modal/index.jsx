@@ -4,11 +4,14 @@ import Portal from './Portal';
 import { Overlay, Dialog } from './styles';
 
 const Modal = ({ children, isOpen, onClose }) => {
+  // component did mount
   useEffect(() => {
     function onEsc(event) {
       if (event.keyCode === 27) onClose();
     }
     window.addEventListener('keydown', onEsc);
+
+    // component will unmount
     return () => {
       window.removeEventListener('keydown', onEsc);
     };

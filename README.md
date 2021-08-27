@@ -12,7 +12,8 @@ It is using eslint for a better development.
 - react-rating-stars-component
 
 **I though it was great to:**
-- learn and apply the *react portals concept*: "Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component." definition from reactjs.org 
+- learn and apply the *react portals concept*: "Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component." definition from reactjs.org
+- integrate with Google Maps API and Places API
 
 **Observations**
 - @material/react-text-field - is no longer under development (originally used in this project)

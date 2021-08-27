@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '@material/mwc-textfield';
 import '@material/mwc-icon';
-import { Container, Search, Logo, Wrapper, Map, Carousel, CarouselTitle } from './styles';
+import { Container, Search, Logo, Wrapper, Carousel, CarouselTitle } from './styles';
 import logo from '../../assets/logo.svg';
-import { Card, RestaurantCard, Modal } from '../../components';
+import { Card, RestaurantCard, Modal, Map } from '../../components';
 
 import restaurante from '../../assets/restaurante-fake.png';
 
@@ -59,14 +59,14 @@ const Home = () => {
             <Card photo={restaurante} title="nome 1" />
             <Card photo={restaurante} title="nome 1" />
           </Carousel>
-          <button type="button" onClick={() => setModalOpened(true)}>
+          {/* <button type="button" onClick={() => setModalOpened(true)}>
             Abrir modal
-          </button>
+          </button> */}
         </Search>
         <RestaurantCard />
       </Container>
       <Map />
-      <Modal isOpen={modalOpened} onClose={() => setModalOpened(!modalOpened)} />
+      {/* <Modal isOpen={modalOpened} onClose={() => setModalOpened(!modalOpened)} /> */}
     </Wrapper>
   );
 };
