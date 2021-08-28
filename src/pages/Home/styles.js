@@ -46,3 +46,18 @@ export const CarouselTitle = styled.h1`
   line-height: 29px;
   margin: 16px 0;
 `;
+
+export const Input = styled.input`
+  border: none;
+  border-bottom: 1px solid;
+  padding: 16px;
+  box-sizing: border-box;
+  font-family: ${(props) => props.theme.fonts.regular};
+  font-size: 16px;
+
+  :focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid ${(props) => props.theme.colors.primary};
+  }
+`;

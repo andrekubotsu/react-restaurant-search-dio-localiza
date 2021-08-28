@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import '@material/mwc-textfield';
-import '@material/mwc-icon';
-import { Container, Search, Logo, Wrapper, Carousel, CarouselTitle } from './styles';
+
+import { Container, Search, Logo, Wrapper, Carousel, CarouselTitle, Input } from './styles';
 import logo from '../../assets/logo.svg';
 import { Card, RestaurantCard, Modal, Map } from '../../components';
 
@@ -9,6 +8,7 @@ import restaurante from '../../assets/restaurante-fake.png';
 
 const Home = () => {
   const [inputValue, setInputValue] = useState('');
+  const [query, setQuery] = useState(null);
   const [modalOpened, setModalOpened] = useState(false);
 
   const settings = {
@@ -19,21 +19,28 @@ const Home = () => {
     slidesToScroll: 4,
     adaptiveHeight: true,
   };
+
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      setQuery(inputValue);
+    }
+  }
+
   return (
     <Wrapper>
       <Container>
         <Search>
           <Logo src={logo} alt="Logo do restaurante" />
-          <mwc-textfield
-            label="Pesquisar restaurantes"
-            // type="search"
-            helper="Digite o nome do restaurante"
-            iconTrailing="search"
+
+          <Input
+            placeholder="Pesquise"
             value={inputValue}
+            onKeyPress={(e) => handleKeyPress(e)}
             onChange={(e) => {
               setInputValue(e.target.value);
             }}
           />
+
           {/* <TextField
           label="Pesquisar"
           helperText={<HelperText>Digite o nome do restaurante</HelperText>}
@@ -65,7 +72,7 @@ const Home = () => {
         </Search>
         <RestaurantCard />
       </Container>
-      <Map />
+      <Map query={query} />
       {/* <Modal isOpen={modalOpened} onClose={() => setModalOpened(!modalOpened)} /> */}
     </Wrapper>
   );

@@ -5,8 +5,6 @@ It is using eslint for a better development.
 **Packages/libs added:**
 - styled-components
 - styled-reset
-- @material/mwc-textfield
-- @material/mwc-icon
 - react-slick
 - slick-carousel
 - react-rating-stars-component
@@ -17,6 +15,10 @@ It is using eslint for a better development.
 
 **Observations**
 - @material/react-text-field - is no longer under development (originally used in this project)
+
+**Extra implementations / Changes / Updates**
+- Input Text Field was made from 'scratch', my own implementation using CSS-in-JS;
+- extra animations and transitions;
 
 ## Available Scripts
 

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "@material/mwc-icon": "^0.22.1",
     "@material/mwc-textfield": "^0.22.1",
     "@material/react-material-icon": "^0.15.0",
