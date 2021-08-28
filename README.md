@@ -3,15 +3,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 It is using eslint for a better development.
 
 **Packages/libs added:**
-- styled-components
+- styled-components (with use of ThemeProvider)
 - styled-reset
 - react-slick
 - slick-carousel
 - react-rating-stars-component
+- redux
+- react-redux
 
 **I though it was great to:**
 - learn and apply the *react portals concept*: "Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component." definition from reactjs.org
 - integrate with Google Maps API and Places API
+- Redux/Flux: study purposes only, this app does not really need it (Context API is more than enough). However, it was great to apply the flux concept with redux/react-redux library. 
 
 **Observations**
 - @material/react-text-field - is no longer under development (originally used in this project)
