@@ -10,6 +10,7 @@ It is using eslint for a better development.
 - react-rating-stars-component
 - redux
 - react-redux
+- react-lottie-player
 
 **I though it was great to:**
 - learn and apply the *react portals concept*: "Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component." definition from reactjs.org
@@ -18,10 +19,11 @@ It is using eslint for a better development.
 
 **Observations**
 - @material/react-text-field - is no longer under development (originally used in this project)
+- react-lottie - is dead, I mean it does not have any update for at least 3 years. I am using another version, a fork called react-lottie-player instead
 
 **Extra implementations / Changes / Updates**
 - Input Text Field was made from 'scratch', my own implementation using CSS-in-JS;
-- extra animations and transitions;
+- added extra animations and transitions;
 
 ## Available Scripts
 
