@@ -61,3 +61,24 @@ export const Input = styled.input`
     border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   }
 `;
+
+export const ModalTitle = styled.p`
+  margin-bottom: 10px;
+  letter-spacing: 0.11px;
+  font-family: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.text};
+  text-transform: none;
+  line-height: 29px;
+  font-size: 24px;
+  font-weight: bold;
+`;
+
+export const ModalContent = styled.p`
+  margin-bottom: 10px;
+  font-family: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.text};
+  text-transform: none;
+  line-height: 29px;
+  font-size: 16px;
+  font-weight: normal;
+`;
