@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Slider from 'react-slick';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -19,23 +18,17 @@ export const Search = styled.section`
   background-color: #fff;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 30px 16px 20px 16px;
 `;
 
 export const Logo = styled.img`
-  width: 50%;
-  margin-bottom: 15px;
+  width: 70%;
+  margin-bottom: 25px;
 `;
 
 export const Map = styled.div`
   background-color: red;
   width: 120px;
-`;
-
-export const Carousel = styled(Slider)`
-  .slick-slide {
-    margin-right: 16px;
-  }
 `;
 
 export const CarouselTitle = styled.h1`
@@ -44,7 +37,7 @@ export const CarouselTitle = styled.h1`
   font-size: 24px;
   font-weight: bold;
   line-height: 29px;
-  margin: 16px 0;
+  margin: 30px 0 16px;
 `;
 
 export const Input = styled.input`
@@ -60,4 +53,25 @@ export const Input = styled.input`
     border: none;
     border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   }
+`;
+
+export const ModalTitle = styled.p`
+  margin-bottom: 10px;
+  letter-spacing: 0.11px;
+  font-family: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.text};
+  text-transform: none;
+  line-height: 29px;
+  font-size: 24px;
+  font-weight: bold;
+`;
+
+export const ModalContent = styled.p`
+  margin-bottom: 10px;
+  font-family: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.text};
+  text-transform: none;
+  line-height: 29px;
+  font-size: 16px;
+  font-weight: normal;
 `;
