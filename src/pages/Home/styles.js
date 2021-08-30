@@ -18,12 +18,12 @@ export const Search = styled.section`
   background-color: #fff;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 30px 16px 20px 16px;
 `;
 
 export const Logo = styled.img`
-  width: 50%;
-  margin-bottom: 15px;
+  width: 70%;
+  margin-bottom: 25px;
 `;
 
 export const Map = styled.div`
@@ -37,7 +37,7 @@ export const CarouselTitle = styled.h1`
   font-size: 24px;
   font-weight: bold;
   line-height: 29px;
-  margin: 16px 0;
+  margin: 30px 0 16px;
 `;
 
 export const Input = styled.input`

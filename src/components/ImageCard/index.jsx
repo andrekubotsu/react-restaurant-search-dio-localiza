@@ -22,10 +22,11 @@ const Card = styled.div`
 const Title = styled.span`
   font-family: ${(props) => props.theme.fonts.regular};
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   margin: 30px;
   margin-top: 10px;
   margin-right: 10px;
+  text-align: left;
 `;
 
 const ImageCard = ({ photo, title, onClick }) => {

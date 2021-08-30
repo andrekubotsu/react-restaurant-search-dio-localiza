@@ -41,7 +41,7 @@ const Home = () => {
           <Logo src={logo} alt="Logo do restaurante" />
 
           <Input
-            placeholder="Pesquise"
+            placeholder="Digite sua pesquisa"
             value={inputValue}
             onKeyPress={(e) => handleKeyPress(e)}
             onChange={(e) => {
@@ -51,7 +51,7 @@ const Home = () => {
 
           {restaurants.length > 0 ? (
             <>
-              <CarouselTitle>Na sua área</CarouselTitle>
+              <CarouselTitle>Na sua área:</CarouselTitle>
               <Carousel
                 plugins={[
                   {
