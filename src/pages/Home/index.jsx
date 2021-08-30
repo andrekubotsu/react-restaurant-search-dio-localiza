@@ -1,12 +1,13 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
 import {
   Container,
   Search,
   Logo,
   Wrapper,
-  Carousel,
   CarouselTitle,
   Input,
   ModalTitle,
@@ -15,24 +16,12 @@ import {
 import logo from '../../assets/logo.svg';
 import { Card, RestaurantCard, Modal, Map, Loader, Skeleton } from '../../components';
 
-import restaurante from '../../assets/restaurante-fake.png';
-
 const Home = () => {
   const [inputValue, setInputValue] = useState('');
   const [query, setQuery] = useState(null);
   const [placeId, setPlaceId] = useState(null);
   const [modalOpened, setModalOpened] = useState(false);
   const { restaurants, restaurantSelected } = useSelector((state) => state.restaurants);
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 300,
-    autoplay: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    adaptiveHeight: true,
-  };
 
   function handleKeyPress(event) {
     if (event.key === 'Enter') {
@@ -63,12 +52,23 @@ const Home = () => {
           {restaurants.length > 0 ? (
             <>
               <CarouselTitle>Na sua área</CarouselTitle>
-              <Carousel {...settings}>
+              <Carousel
+                plugins={[
+                  {
+                    resolve: slidesToShowPlugin,
+                    options: {
+                      numberOfSlides: 3,
+                    },
+                  },
+                  'autoplay',
+                  'infinite',
+                ]}>
                 {restaurants.map((restaurant) => (
                   <Card
                     key={restaurant.place_id}
-                    photo={restaurant.photos ? restaurant.photos[0].getUrl() : restaurante}
+                    photo={restaurant.photos ? restaurant.photos[0].getUrl() : restaurant.icon}
                     title={restaurant.name}
+                    onClick={() => handleOpenModal(restaurant.place_id)}
                   />
                 ))}
               </Carousel>

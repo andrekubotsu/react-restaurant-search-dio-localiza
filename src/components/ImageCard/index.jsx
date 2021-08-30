@@ -11,6 +11,12 @@ const Card = styled.div`
   border-radius: 6px;
   background-image: url(${(props) => props.photo});
   background-size: cover;
+  cursor: pointer;
+  transition: 300ms;
+
+  :hover {
+    opacity: 0.8;
+  }
 `;
 
 const Title = styled.span`
@@ -22,7 +28,7 @@ const Title = styled.span`
   margin-right: 10px;
 `;
 
-const ImageCard = ({ photo, title }) => {
+const ImageCard = ({ photo, title, onClick }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -34,7 +40,7 @@ const ImageCard = ({ photo, title }) => {
   return (
     <>
       {imageLoaded ? (
-        <Card photo={photo}>
+        <Card photo={photo} onClick={onClick}>
           <Title>{title}</Title>
         </Card>
       ) : (
