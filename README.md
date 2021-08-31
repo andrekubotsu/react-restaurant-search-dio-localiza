@@ -16,14 +16,15 @@ It is using eslint for a better development.
 - integrate with Google Maps API and Places API
 - Redux/Flux: study purposes only, this app does not really need it (Context API is more than enough). However, it was great to apply the flux concept with redux/react-redux library. 
 
-**Observations**
+**Extra implementations / Changes / Updates**
+- Input Text Field was made from 'scratch', my own implementation using CSS-in-JS;
+- added extra animations and transitions;
 - @material/react-text-field - is no longer under development (originally used in this project)
 - react-lottie - is dead, I mean it does not have any update for at least 3 years. I am using another version, a fork called react-lottie-player instead
 - react-slick did not work well, changed to @brainhubeu/react-carousel, but it still not working fine
 
-**Extra implementations / Changes / Updates**
-- Input Text Field was made from 'scratch', my own implementation using CSS-in-JS;
-- added extra animations and transitions;
+**To check it**
+https://restaurant-finder-localiza.netlify.app/
 
 ## Available Scripts
 
