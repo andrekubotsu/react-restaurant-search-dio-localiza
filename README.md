@@ -5,8 +5,7 @@ It is using eslint for a better development.
 **Packages/libs added:**
 - styled-components (with use of ThemeProvider)
 - styled-reset
-- react-slick
-- slick-carousel
+- @brainhubeu/react-carousel
 - react-rating-stars-component
 - redux
 - react-redux
@@ -20,6 +19,7 @@ It is using eslint for a better development.
 **Observations**
 - @material/react-text-field - is no longer under development (originally used in this project)
 - react-lottie - is dead, I mean it does not have any update for at least 3 years. I am using another version, a fork called react-lottie-player instead
+- react-slick did not work well, changed to @brainhubeu/react-carousel, but it still not working fine
 
 **Extra implementations / Changes / Updates**
 - Input Text Field was made from 'scratch', my own implementation using CSS-in-JS;
