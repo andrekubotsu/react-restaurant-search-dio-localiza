@@ -11,53 +11,63 @@ export const MapContainer = (props) => {
   const [map, setMap] = useState(null);
   const { google, query, placeId } = props;
 
-  function searchByQuery(query) {
-    const service = new google.maps.places.PlacesService(map);
-    dispatch(setRestaurants([]));
-
-    const request = {
-      location: map.center,
-      radius: '200',
-      type: ['restaurant'],
-      query,
-    };
-
-    service.textSearch(request, (results, status) => {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        dispatch(setRestaurants(results));
-      }
-    });
-  }
-
   // user query
   useEffect(() => {
+    function searchByQuery(query) {
+      const service = new google.maps.places.PlacesService(map);
+      dispatch(setRestaurants([]));
+
+      const request = {
+        location: map.center,
+        radius: '200',
+        type: ['restaurant'],
+        query,
+      };
+
+      service.textSearch(request, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          dispatch(setRestaurants(results));
+        }
+      });
+    }
     if (query) {
       searchByQuery(query);
     }
-  }, [query]);
-
-  function getRestaurantById() {
-    const service = new google.maps.places.PlacesService(map);
-    dispatch(setRestaurant(null));
-
-    const request = {
-      placeId,
-      fields: ['name', 'opening_hours', 'formatted_address', 'formatted_phone_number'],
-    };
-
-    service.getDetails(request, (place, status) => {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        dispatch(setRestaurant(place));
-      }
-    });
-  }
+  }, [
+    query,
+    dispatch,
+    google.maps.places.PlacesService,
+    google.maps.places.PlacesServiceStatus.OK,
+    map,
+  ]);
 
   // place id
   useEffect(() => {
+    function getRestaurantById() {
+      const service = new google.maps.places.PlacesService(map);
+      dispatch(setRestaurant(null));
+
+      const request = {
+        placeId,
+        fields: ['name', 'opening_hours', 'formatted_address', 'formatted_phone_number'],
+      };
+
+      service.getDetails(request, (place, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          dispatch(setRestaurant(place));
+        }
+      });
+    }
     if (placeId) {
       getRestaurantById(placeId);
     }
-  }, [placeId]);
+  }, [
+    placeId,
+    dispatch,
+    google.maps.places.PlacesService,
+    google.maps.places.PlacesServiceStatus.OK,
+    map,
+  ]);
 
   function searchNearby(map, center) {
     const service = new google.maps.places.PlacesService(map);
